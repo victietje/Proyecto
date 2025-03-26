@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalBody = document.getElementById('modalBody');
     const modalClose = document.querySelector('.modal-close');
 
-    // Abrir modal al hacer clic en una tarjeta
     cards.forEach(card => {
         card.addEventListener('click', function() {
             const title = this.querySelector('h2').textContent;
@@ -21,12 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Cerrar modal al hacer clic en la X
     modalClose.addEventListener('click', function() {
         modalOverlay.classList.remove('active');
     });
 
-    // Cerrar modal al hacer clic fuera del contenido
     modalOverlay.addEventListener('click', function(e) {
         if (e.target === modalOverlay) {
             modalOverlay.classList.remove('active');
