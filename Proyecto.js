@@ -17,6 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
             modalSubtitle.textContent = subtitle;
             modalBody.innerHTML = content;
             modalOverlay.classList.add('active');
+
+            // Dentro del event listener de clic en las tarjetas
+            modalBody.innerHTML = `
+            <div class="expanded-content">
+                <div class="text-content">
+                    ${content}
+                </div>
+                <div class="image-content">
+                    <img src="imagen-${contentId}.jpg" alt="${title}">
+                </div>
+            </div>
+            `;
         });
     });
 

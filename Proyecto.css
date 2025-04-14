@@ -181,4 +181,55 @@ header {
         font-size: 2rem;
     }
 }
+/* Estilos para el contenido expandido */
+.expanded-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.image-content {
+    flex: 1;
+    max-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-content:hover img {
+    transform: scale(1.05);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .expanded-content {
+        flex-direction: column;
+    }
+    
+    .image-content {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Ajusta el modal para el nuevo diseño */
+.modal-content {
+    width: 90%;
+    max-width: 1000px; /* Más ancho para acomodar la imagen */
+}
+
+.modal-body {
+    margin-top: 0;
+}
 
